@@ -5,7 +5,7 @@
   
   **Advanced Forensic Analysis & Data Recovery Tool**
   
-  _Built by Biruk Getachew_
+  _Built by CIPHER(Biruk Getachew_)
 </div>
 
 ---
@@ -51,4 +51,4 @@ It started as a simple Hex Viewer but I've expanded it into a full forensic suit
 > "Decryption is just advanced reading."
 
 ---
-© 2024 CIPHER. All rights reserved.
+© 2025 CIPHER. All rights reserved.
