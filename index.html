@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CIPHER // Advanced Forensic Suite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'hacker-green': '#00ff41',
+              'hacker-dark': '#050505',
+              'cyber-blue': '#00f3ff',
+              'glass-black': 'rgba(5, 5, 5, 0.7)',
+            },
+            fontFamily: {
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+              sans: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            },
+            animation: {
+              'spin-slow': 'spin 20s linear infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #050505;
+        color: #e0e0e0;
+        overflow-x: hidden;
+      }
+      
+      /* SCROLLBAR */
+      ::-webkit-scrollbar { width: 6px; height: 6px; }
+      ::-webkit-scrollbar-track { background: #0a0a0a; }
+      ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #00ff41; }
+      
+      /* 3D TESSERACT ANIMATIONS */
+      .scene-3d { perspective: 1000px; }
+      .cube-3d {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        animation: rotateCube 20s infinite linear;
+      }
+      .cube-face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border: 1px solid rgba(0, 255, 65, 0.3);
+        background: rgba(0, 255, 65, 0.05);
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: monospace;
+        font-size: 10px;
+        color: rgba(0, 255, 65, 0.8);
+      }
+      .cube-face-front  { transform: rotateY(0deg) translateZ(50px); }
+      .cube-face-back   { transform: rotateY(180deg) translateZ(50px); }
+      .cube-face-right  { transform: rotateY(90deg) translateZ(50px); }
+      .cube-face-left   { transform: rotateY(-90deg) translateZ(50px); }
+      .cube-face-top    { transform: rotateX(90deg) translateZ(50px); }
+      .cube-face-bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+      @keyframes rotateCube {
+        0% { transform: rotateX(0deg) rotateY(0deg); }
+        100% { transform: rotateX(360deg) rotateY(360deg); }
+      }
+
+      /* GLITCH EFFECTS */
+      .glitch-wrapper { position: relative; display: inline-block; }
+      .glitch-wrapper::before, .glitch-wrapper::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #050505;
+      }
+      .glitch-wrapper::before {
+        left: 2px;
+        text-shadow: -1px 0 #ff00c1;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim 5s infinite linear alternate-reverse;
+      }
+      .glitch-wrapper::after {
+        left: -2px;
+        text-shadow: -1px 0 #00fff9;
+        clip: rect(44px, 450px, 56px, 0);
+        animation: glitch-anim2 5s infinite linear alternate-reverse;
+      }
+
+      @keyframes glitch-anim {
+        0% { clip: rect(31px, 9999px, 94px, 0); }
+        20% { clip: rect(6px, 9999px, 12px, 0); }
+        40% { clip: rect(87px, 9999px, 98px, 0); }
+        60% { clip: rect(15px, 9999px, 44px, 0); }
+        80% { clip: rect(62px, 9999px, 2px, 0); }
+        100% { clip: rect(54px, 9999px, 19px, 0); }
+      }
+      @keyframes glitch-anim2 {
+        0% { clip: rect(66px, 9999px, 34px, 0); }
+        20% { clip: rect(2px, 9999px, 86px, 0); }
+        40% { clip: rect(23px, 9999px, 7px, 0); }
+        60% { clip: rect(98px, 9999px, 11px, 0); }
+        80% { clip: rect(46px, 9999px, 63px, 0); }
+        100% { clip: rect(82px, 9999px, 5px, 0); }
+      }
+
+      /* SCANLINE */
+      .scanline {
+        width: 100%;
+        height: 100px;
+        z-index: 10;
+        background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0, 255, 65, 0.1) 50%, rgba(0,0,0,0) 100%);
+        opacity: 0.1;
+        position: absolute;
+        bottom: 100%;
+        animation: scanline 10s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes scanline {
+        0% { bottom: 100%; }
+        100% { bottom: -100%; }
+      }
+
+      /* CRT OVERLAY */
+      .crt::before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+        z-index: 2;
+        background-size: 100% 2px, 3px 100%;
+        pointer-events: none;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@heroicons/react/": "https://aistudiocdn.com/@heroicons/react@^2.2.0/",
+    "react-qr-code": "https://esm.sh/react-qr-code@2.0.12?external=react,react-dom"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

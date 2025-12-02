@@ -1,0 +1,5 @@
+{
+  "name": "CIPHER",
+  "description": "Advanced cryptographic analysis tool for configuration files. Features entropy analysis, protocol fingerprinting, and payload reconstruction.",
+  "requestFramePermissions": []
+}
