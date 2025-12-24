@@ -1,5 +1,7 @@
-<div align="center">
-  <img src="https://via.placeholder.com/150/000000/00ff41?text=CIPHER" alt="CIPHER Logo" width="120" height="120" style="border-radius: 20px" />
+ <div align="left">
+  <img src="./images/cipher.png" alt="CIPHER" width="120" height="120" style="border-radius: 20px;">
+</div>
+
   
   # CIPHER
   
@@ -18,11 +20,11 @@ It started as a simple Hex Viewer but I've expanded it into a full forensic suit
 
 ## Key Features
 
-*   **🕵️‍♂️ Deep Packet Inspection:** Extracts hidden Strings, IPs, and Credentials from binary blobs.
-*   **🧠 Hybrid Intelligence:** Works 100% offline (Local Engine) or online (Cloud AI) for complex recovery.
-*   **💉 Payload Generator:** Auto-generates working HTTP injection scripts based on a bug host.
-*   **📡 Dead Drop:** Share sensitive configs via QR Code (Air-gapped) without internet.
-*   **🎨 Cyber UI:** Fully immersive 3D interface with particle networks and sound effects.
+*   ** Deep Packet Inspection:** Extracts hidden Strings, IPs, and Credentials from binary blobs.
+*   ** Hybrid Intelligence:** Works 100% offline (Local Engine) or online (Cloud AI) for complex recovery.
+*   ** Payload Generator:** Auto-generates working HTTP injection scripts based on a bug host.
+*   ** Dead Drop:** Share sensitive configs via QR Code (Air-gapped) without internet.
+*   ** Cyber UI:** Fully immersive 3D interface with particle networks and sound effects.
 
 ## Tech Stack
 
@@ -46,7 +48,7 @@ It started as a simple Hex Viewer but I've expanded it into a full forensic suit
 ## Author
 
 **Biruk Getachew**  
-*Web Developer & Security Researcher*
+*i learn in cybersecurity red teaming*
 
 > "Decryption is just advanced reading."
 
