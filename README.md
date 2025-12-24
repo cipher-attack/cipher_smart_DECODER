@@ -1,5 +1,5 @@
- <div align="left">
-  <img src="./image/cipher.jpg" alt="CIPHER" width="120" height="120" src="CIPHER" style="border-radius: 20px;">
+center <div align="">
+  <img src="./image/cipher.jpg" alt="CIPHER" width="150" height="150" src="CIPHER" style="border-radius: 20px;">
 </div>
 
   
